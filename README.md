@@ -1,1 +1,1 @@
-Gramps Web https://www.grampsweb.org/
+My self-host Gramps Web via Docker Compose instance https://www.grampsweb.org/
