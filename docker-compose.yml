@@ -1,9 +1,9 @@
 services:
   grampsweb: &grampsweb
     image: ghcr.io/gramps-project/grampsweb:latest
-    restart: always
+    restart: on-failure:10
     ports:
-      - '3005:5000' # host:docker
+      - '3003:5000' # host:docker
     environment:
       GRAMPSWEB_TREE: 'Gramps Web' # will create a new tree if not exists
       GRAMPSWEB_CELERY_CONFIG__broker_url: 'redis://grampsweb_redis:6379/0'
